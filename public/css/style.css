@@ -64,9 +64,10 @@
 
 .nav-item {
   display: flex;
+  position: relative;
   width: 240px;
   height:240px;
-  padding: 15px;
+  padding: 5px;
 }
 
 .nav-item > a {
@@ -78,8 +79,11 @@
 }
 
 .nav-about-out, .nav-contact-out, .nav-portfolio-out {
-  position: relative;
   transition: all 0.5s ease;
+}
+
+.nav-about-in > a, .nav-contact-in > a, .nav-portfolio-in > a {
+  vertical-align: text-bottom;
 }
 
 .nav-about-out, .nav-about-in {
@@ -88,9 +92,12 @@
 }
 
 .nav-about-out {
-  right: 50px;
+  right: 20px;
 }
 
+.nav-about-in {
+  left: 20px;
+}
 
 .nav-contact-out, .nav-contact-in {
   background-color: red;
@@ -99,7 +106,7 @@
 
 .nav-contact-out {
   background-color: red;
-  top: 50px;
+  top: 20px;
 }
 
 .nav-contact-in {
@@ -113,11 +120,11 @@
 }
 
 .nav-portfolio-out {
-  left: 50px;
+  left: 20px;
 }
 
 .nav-portfolio-in {
-
+  right: 20px;
 }
 
 
