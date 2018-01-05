@@ -1,5 +1,6 @@
 * {
   font-family: 'Open Sans', sans-serif;
+  /*background-color: #ccc;*/
 }
 
 .container-home {
@@ -17,7 +18,7 @@
   display: grid;
   grid-template-columns: auto 62px;
   grid-template-areas: 
-    "main       nav-right"
+    "main nav-right"
 }
 
 .container-contact {
@@ -34,7 +35,7 @@
   display: grid;
   grid-template-columns: 62px auto;
   grid-template-areas: 
-    "nav-left        main";
+    "nav-left main";
 }
 
 .main {
@@ -42,22 +43,26 @@
   height: 600px;
 }
 
+.nav-left, .nav-bottom, .nav-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .nav-item {
   display: flex;
-  /*text-align: center;*/
+  width: 240px;
+  height:240px;
+  padding: 15px;
 }
 
 .nav-item > a {
-  /*Allows a tag to completely fill up .nav-item*/
-  flex-grow: 1;
   text-align: center;
   font-size: 24px;
+  /*Allows a tag to completely fill up .nav-item*/
+  flex-grow: 1;
   color: #fff;
 }
-
-/*.nav-item > a:hover {
-  background: yellow;
-}*/
 
 .nav-left {
   grid-area: nav-left;
@@ -81,16 +86,38 @@
 
 .nav-bottom-left {
   grid-area: nav-bottom-left;
-  background-color: #fff;
+  /*background-color: #fff;*/
 }
 
 .nav-bottom-right {
   grid-area: nav-bottom-right;
-  background-color: #fff;
+  /*background-color: #fff;*/
 }
 
 .nav-about-out, .nav-about-in {
   writing-mode: vertical-rl;
+}
+
+.nav-about-out, .nav-contact-out, .nav-portfolio-out {
+  transition: all 0.5s ease;
+}
+
+.nav-about-out {
+  background-color: blue;
+  position: relative;
+  right: 50px;
+}
+
+.nav-contact-out {
+  background-color: red;
+  position: relative;
+  top: 50px;
+}
+
+.nav-portfolio-out {
+  background-color: green;
+  position: relative;
+  left: 50px;
 }
 
 .nav-about-in {
@@ -101,11 +128,16 @@
   background-color: red;
 }
 
+.nav-portfolio-in {
+  background-color: green;
+}
+
 .nav-portfolio-out, .nav-portfolio-in {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
 }
 
-.nav-portfolio-in {
-  background-color: green;
-}
+
+
+
+
