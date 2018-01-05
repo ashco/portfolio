@@ -1,3 +1,7 @@
+* {
+  font-family: 'Open Sans', sans-serif;
+}
+
 .container-home {
   width: 100%;
   display: grid;
@@ -40,50 +44,55 @@
 
 .nav-item {
   display: flex;
-  align-content: center;
+  /*text-align: center;*/
 }
 
 .nav-item > a {
   /*Allows a tag to completely fill up .nav-item*/
   flex-grow: 1;
-  /*align-self: center;*/
-  /*text-align: center;*/
+  text-align: center;
+  font-size: 24px;
 }
+
+/*.nav-item > a:hover {
+  background: yellow;
+}*/
 
 .nav-left {
   grid-area: nav-left;
-  background-color: #ccc;
+  background-color: #fff;
 }
 
 .nav-bottom {
   grid-area: nav-bottom;
-  background-color: #ddd;
+  background-color: #fff;
 }
 
 .nav-right {
   grid-area: nav-right;
-  background-color: #bbb;
+  background-color: #fff;
 }
 
 .nav-top {
   grid-area: nav-top;
-  background-color: #ddd;
+  background-color: #fff;
 }
 
 .nav-bottom-left {
   grid-area: nav-bottom-left;
-  background-color: #777;
+  background-color: #fff;
 }
 
 .nav-bottom-right {
   grid-area: nav-bottom-right;
-  background-color: #777;
+  background-color: #fff;
 }
 
 .nav-about {
-  writing-mode: vertical-lr;
+  writing-mode: vertical-rl;
 }
 
 .nav-portfolio {
   writing-mode: vertical-rl;
+  transform: rotate(180deg);
 }
