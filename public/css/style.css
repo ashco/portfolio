@@ -1,16 +1,17 @@
 * {
   font-family: 'Open Sans', sans-serif;
-  /*background-color: #ccc;*/
+  /*background-color: #444;*/
 }
 
+/*Containers*/
 .container-home {
   width: 100%;
   display: grid;
   grid-template-columns: 62px auto 62px;
   grid-template-rows: auto 62px;
   grid-template-areas: 
-    "nav-left        main       nav-right"
-    "nav-bottom-left nav-bottom nav-bottom-right";
+    "nav-left main       nav-right"
+    ".        nav-bottom .        ";
 }
 
 .container-about {
@@ -38,12 +39,24 @@
     "nav-left main";
 }
 
-.main {
-  grid-area: main;
-  height: 600px;
+/*Navigation*/
+.nav-left {
+  grid-area: nav-left;
 }
 
-.nav-left, .nav-bottom, .nav-right {
+.nav-bottom {
+  grid-area: nav-bottom;
+}
+
+.nav-right {
+  grid-area: nav-right;
+}
+
+.nav-top {
+  grid-area: nav-top;
+}
+
+.nav-left, .nav-bottom, .nav-right, .nav-top {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -64,80 +77,55 @@
   color: #fff;
 }
 
-.nav-left {
-  grid-area: nav-left;
-  background-color: #fff;
-}
-
-.nav-bottom {
-  grid-area: nav-bottom;
-  background-color: #fff;
-}
-
-.nav-right {
-  grid-area: nav-right;
-  background-color: #fff;
-}
-
-.nav-top {
-  grid-area: nav-top;
-  background-color: #fff;
-}
-
-.nav-bottom-left {
-  grid-area: nav-bottom-left;
-  /*background-color: #fff;*/
-}
-
-.nav-bottom-right {
-  grid-area: nav-bottom-right;
-  /*background-color: #fff;*/
+.nav-about-out, .nav-contact-out, .nav-portfolio-out {
+  position: relative;
+  transition: all 0.5s ease;
 }
 
 .nav-about-out, .nav-about-in {
   writing-mode: vertical-rl;
-}
-
-.nav-about-out, .nav-contact-out, .nav-portfolio-out {
-  transition: all 0.5s ease;
+  background-color: blue;
 }
 
 .nav-about-out {
-  background-color: blue;
-  position: relative;
   right: 50px;
 }
 
+
+.nav-contact-out, .nav-contact-in {
+  background-color: red;
+}
+
+
 .nav-contact-out {
   background-color: red;
-  position: relative;
   top: 50px;
 }
 
-.nav-portfolio-out {
-  background-color: green;
-  position: relative;
-  left: 50px;
-}
-
-.nav-about-in {
-  background-color: blue;
-}
-
 .nav-contact-in {
-  background-color: red;
-}
 
-.nav-portfolio-in {
-  background-color: green;
 }
 
 .nav-portfolio-out, .nav-portfolio-in {
+  background-color: green;
   writing-mode: vertical-rl;
   transform: rotate(180deg);
 }
 
+.nav-portfolio-out {
+  left: 50px;
+}
+
+.nav-portfolio-in {
+
+}
 
 
 
 
+
+/*Main Body*/
+.main {
+  grid-area: main;
+  height: 600px;
+}
