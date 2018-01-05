@@ -52,6 +52,7 @@
   flex-grow: 1;
   text-align: center;
   font-size: 24px;
+  color: #fff;
 }
 
 /*.nav-item > a:hover {
@@ -88,11 +89,23 @@
   background-color: #fff;
 }
 
-.nav-about {
+.nav-about-out, .nav-about-in {
   writing-mode: vertical-rl;
 }
 
-.nav-portfolio {
+.nav-about-in {
+  background-color: blue;
+}
+
+.nav-contact-in {
+  background-color: red;
+}
+
+.nav-portfolio-out, .nav-portfolio-in {
   writing-mode: vertical-rl;
   transform: rotate(180deg);
+}
+
+.nav-portfolio-in {
+  background-color: green;
 }
