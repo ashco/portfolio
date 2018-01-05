@@ -1,0 +1,89 @@
+.container-home {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 62px auto 62px;
+  grid-template-rows: auto 62px;
+  grid-template-areas: 
+    "nav-left        main       nav-right"
+    "nav-bottom-left nav-bottom nav-bottom-right";
+}
+
+.container-about {
+  width: 100%;
+  display: grid;
+  grid-template-columns: auto 62px;
+  grid-template-areas: 
+    "main       nav-right"
+}
+
+.container-contact {
+  width: 100%;
+  display: grid;
+  grid-template-rows: 62px auto;
+  grid-template-areas: 
+    "nav-top"
+    "main";
+}
+
+.container-portfolio {
+  width: 100%;
+  display: grid;
+  grid-template-columns: 62px auto;
+  grid-template-areas: 
+    "nav-left        main";
+}
+
+.main {
+  grid-area: main;
+  height: 600px;
+}
+
+.nav-item {
+  display: flex;
+  align-content: center;
+}
+
+.nav-item > a {
+  /*Allows a tag to completely fill up .nav-item*/
+  flex-grow: 1;
+  /*align-self: center;*/
+  /*text-align: center;*/
+}
+
+.nav-left {
+  grid-area: nav-left;
+  background-color: #ccc;
+}
+
+.nav-bottom {
+  grid-area: nav-bottom;
+  background-color: #ddd;
+}
+
+.nav-right {
+  grid-area: nav-right;
+  background-color: #bbb;
+}
+
+.nav-top {
+  grid-area: nav-top;
+  background-color: #ddd;
+}
+
+.nav-bottom-left {
+  grid-area: nav-bottom-left;
+  background-color: #777;
+}
+
+.nav-bottom-right {
+  grid-area: nav-bottom-right;
+  background-color: #777;
+}
+
+.nav-about {
+  writing-mode: vertical-lr;
+}
+
+.nav-portfolio {
+  writing-mode: vertical-rl;
+}
